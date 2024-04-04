@@ -11,6 +11,8 @@ export default function MyProfile() {
     const { data: session } = useSession();
     const [myPrompts, setMyPrompts] = useState<PromptClient[]>([]);
 
+    console.log('sdf');
+
     useEffect(() => {
         const fetchPrompts = async () => {
             const response = await fetch(`/api/user/${session?.user.id}/prompts`);
